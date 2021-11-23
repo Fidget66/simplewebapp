@@ -3,6 +3,7 @@ package com.mastery.java.task.rest;
 import com.mastery.java.task.dto.Employee;
 import com.mastery.java.task.service.api.EmployeeService;
 import org.springframework.web.bind.annotation.*;
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -15,7 +16,7 @@ public class EmployeeController {
     }
 
     @PostMapping(value = "/employee")
-    public Employee create(@RequestBody Employee employee){
+    public Employee create(@Valid @RequestBody Employee employee){
         return service.create(employee);
     }
 
