@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "2411430d-11ae-4df7-b64c-b81063424c23",
+		"name": "SimpleWebApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Ben\",\r\n    \"lastName\":\"Thomson\",\r\n    \"departmentId\" : 11,\r\n    \"jobTitle\" : \"Driver\",\r\n    \"dateOfBirth\": \"1984-03-03\",\r\n    \"nameShop\": \"newShop345\",\r\n    \"gender\": \"MALE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/simplewebapp/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/simplewebapp/employee/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Employee By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/simplewebapp/employee/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/simplewebapp/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\": 4,\r\n    \"firstName\": \"Pit\",\r\n    \"lastName\": \"Patterson\",\r\n    \"jobTitle\": \"Manager\",\r\n    \"dateOfBirth\": \"1999-09-09\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/simplewebapp/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
