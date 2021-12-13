@@ -22,7 +22,7 @@ public class Employee {
     @Pattern(regexp = "[a-zA-Z]*",message = "Only letters are allowed")
     private String lastName;
     @Min(value = 1)
-    private long departmentId;
+    private Long departmentId;
     @NotBlank(message = "Job title can't be null")
     private String jobTitle;
     @NotNull
