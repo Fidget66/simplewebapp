@@ -16,9 +16,9 @@ spring:
       mode: always
   flyway:
     enabled: true
-#    baseline-on-migrate: true
+    baseline-on-migrate: true
   datasource:
     url: jdbc:postgresql://localhost:5432/employeedb
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: 3784
+    password: PostgreSQL

@@ -11,7 +11,7 @@ public class AppConfiguration {
     public void startMigration(){
         Flyway flyway = Flyway
                 .configure()
-                .dataSource("jdbc:postgresql://localhost:5432/employeedb", "postgres", "3784")
+                .dataSource("jdbc:postgresql://localhost:5432/employeedb", "postgres", "PostgreSQL")
                 .load();
         flyway.migrate();
     }
