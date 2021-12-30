@@ -28,6 +28,9 @@ public class Employee {
     @NotNull
     @Enumerated(EnumType.STRING)
     private Gender gender;
+    @NotEmpty
+    @Email
+    private String email;
     @Past(message = "Date must be in the past")
     private LocalDate dateOfBirth;
 }

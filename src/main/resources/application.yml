@@ -22,7 +22,6 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: PostgreSQL
-
-  kafka:
-    consumer:
-      group-id: app.1
+kafka:
+  server: http://localhost:9092
+  topic: email1

@@ -3,6 +3,7 @@ package com.mastery.java.task.config;
 import org.flywaydb.core.Flyway;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.mail.SimpleMailMessage;
 
 @Configuration
 public class AppConfiguration {
@@ -14,6 +15,11 @@ public class AppConfiguration {
                 .dataSource("jdbc:postgresql://localhost:5432/employeedb", "postgres", "PostgreSQL")
                 .load();
         flyway.migrate();
+    }
+
+    @Bean
+    public SimpleMailMessage getSimpleMailMessage(){
+        return new SimpleMailMessage();
     }
 
 }

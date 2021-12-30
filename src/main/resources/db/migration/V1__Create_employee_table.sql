@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS employee
     department_id bigint,
     job_title     varchar,
     gender        varchar,
+    email varchar,
     date_of_birth date,
     PRIMARY KEY (employee_id)
 );

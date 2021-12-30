@@ -14,7 +14,7 @@ class EmployeeServiceImplTest extends Specification {
     EmployeeServiceImpl service
 
     def setup(){
-        service = new EmployeeServiceImpl(employeeDao)
+        service = new EmployeeServiceImpl(employeeDao, message, producer)
     }
 
     def "Create user"() {

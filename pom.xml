@@ -79,6 +79,16 @@
 			<version>2.0-groovy-3.0</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.mastery</groupId>
+			<artifactId>simplewebapp</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+			<version>2.3.4.RELEASE</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
