@@ -3,6 +3,8 @@ server:
   servlet:
     context-path: /simplewebapp
 spring:
+  application:
+    name: simpleWebApp
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
@@ -21,7 +23,14 @@ spring:
     url: jdbc:postgresql://localhost:5432/employeedb
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: PostgreSQL
+#    password: PostgreSQL
+    password: 3784
 kafka:
   server: http://localhost:9092
   topic: email1
+  group:
+    id: myKafkaGroupId
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
