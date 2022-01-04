@@ -23,14 +23,16 @@ spring:
     url: jdbc:postgresql://localhost:5432/employeedb
     driver-class-name: org.postgresql.Driver
     username: postgres
-#    password: PostgreSQL
-    password: 3784
+    password: PostgreSQL
+#    password: 3784
 kafka:
   server: http://localhost:9092
   topic: email1
   group:
     id: myKafkaGroupId
 eureka:
+  instance:
+    appname: simpleWebApp
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
