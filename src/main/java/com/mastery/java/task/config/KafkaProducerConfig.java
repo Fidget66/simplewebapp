@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-@RefreshScope
 public class KafkaProducerConfig {
     @Value("${kafka.server}")
     private String kafkaServer;
