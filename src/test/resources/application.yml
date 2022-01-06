@@ -4,15 +4,14 @@ spring:
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     hibernate:
-      ddl-auto: none
+      ddl-auto: validate
     database: postgresql
-  flyway:
-    enabled: false
+    generate-ddl: false
   sql:
     init:
       mode: always
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    url: ${DB_URL}
+kafka:
+  server: http://localhost:9092
+  topic: email1
+  group:
+    id: myKafkaGroupId

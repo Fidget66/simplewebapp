@@ -4,7 +4,6 @@ import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.mail.SimpleMailMessage;
 
 @Configuration
 public class AppConfiguration {
@@ -15,18 +14,16 @@ public class AppConfiguration {
     @Value("${spring.datasource.username}")
     private String user;
 
+    @Value("${spring.datasource.url}")
+    private String url;
+
     @Bean
     public void startMigration(){
         Flyway flyway = Flyway
                 .configure()
-                .dataSource("jdbc:postgresql://localhost:5432/employeedb", user, password)
+                .dataSource(url, user, password)
                 .load();
         flyway.migrate();
-    }
-
-    @Bean
-    public SimpleMailMessage getSimpleMailMessage(){
-        return new SimpleMailMessage();
     }
 
 }

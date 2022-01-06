@@ -32,7 +32,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public Employee create(Employee employee) {
-        employee.setEmployeeId(0L);
         employeeDao.save(employee);
         sendMessage(employee);
         return employee;
